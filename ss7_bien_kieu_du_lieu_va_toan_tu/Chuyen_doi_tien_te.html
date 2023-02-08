@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vu An Khang</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th><label for="Amount">Amount</label></th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <th><input type="number" id="Amount"></th>
+            <th style="text-align: left">
+                <select id="From">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </th>
+            <th style="text-align: left">
+                <select id="To">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </th>
+            <th>
+                <button onclick="chuyendoi()" style="background: mediumpurple; color: white">Convert</button>
+            </th>
+        </tr>
+    </table>
+    <br>
+<h2 id="Result"></h2>
+</body>
+<script>
+    function chuyendoi() {
+        let soluong= document.getElementById("Amount").value;
+        let chuyentu = document.getElementById("From").value;
+        let sang = document.getElementById("To").value;
+        let Result;
+        if (chuyentu == "USD" && sang == "VND") {
+            Result = "Result: " + (soluong * 23000) + " Đ";
+        }
+        else if (chuyentu == "VND" && sang =="USD"){
+            Result = "Result: "+ (soluong / 23000) + " $";
+        }
+        else if (chuyentu == "VND" && sang == "VND") {
+            Result = "Result: " + soluong + " Đ"
+        } else {
+            Result = "Result: " + soluong + " $"
+        }
+        document.getElementById("Result").innerHTML = Result
+    }
+</script>
+</html>
