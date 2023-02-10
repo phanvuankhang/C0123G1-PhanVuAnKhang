@@ -6,28 +6,28 @@
 </head>
 <body>
 <script>
-    let TN = +prompt ("Nhập số thu nhập của bạn (triệu VNĐ)");
+    let thunhap = +prompt ("Nhập số thu nhập của bạn (triệu VNĐ)");
     switch (true) {
-        case TN<=5:
-            alert("Thuế thu nhập cá nhân của bạn là:"+TN*0.05+"triệu VNĐ")
+        case thunhap<=5:
+            alert("Thuế thu nhập cá nhân của bạn là:"+thunhap*0.05+"triệu VNĐ")
             break;
-        case TN<=10:
-            alert("Thuế thu nhập cá nhân của bạn là:"+(TN*0.1-0.25)+"triệu VNĐ")
+        case thunhap<=10:
+            alert("Thuế thu nhập cá nhân của bạn là:"+(thunhap*0.1-0.25)+"triệu VNĐ")
             break;
-        case TN<=18:
-            alert("Thuế thu nhập cá nhân của bạn là:"+(TN*0.15-0.75)+"triệu VNĐ")
+        case thunhap<=18:
+            alert("Thuế thu nhập cá nhân của bạn là:"+(thunhap*0.15-0.75)+"triệu VNĐ")
             break;
-        case TN<=32:
-            alert("Thuế thu nhập cá nhân của bạn là:"+(TN*0.2-1.65)+"triệu VNĐ")
+        case thunhap<=32:
+            alert("Thuế thu nhập cá nhân của bạn là:"+(thunhap*0.2-1.65)+"triệu VNĐ")
             break;
-        case TN<=52:
-            alert("Thuế thu nhập cá nhân của bạn là:"+(TN*0.25-3.25)+"triệu VNĐ")
+        case thunhap<=52:
+            alert("Thuế thu nhập cá nhân của bạn là:"+(thunhap*0.25-3.25)+"triệu VNĐ")
             break;
-        case TN<=80:
-            alert("Thuế thu nhập cá nhân của bạn là:"+(TN*0.3-5.85)+"triệu VNĐ")
+        case thunhap<=80:
+            alert("Thuế thu nhập cá nhân của bạn là:"+(thunhap*0.3-5.85)+"triệu VNĐ")
             break;
-        case TN>80:
-            alert("Thuế thu nhập cá nhân của bạn là:"+(TN*0.35-9.85)+"triệu VNĐ")
+        case thunhap>80:
+            alert("Thuế thu nhập cá nhân của bạn là:"+(thunhap*0.35-9.85)+"triệu VNĐ")
             break;
     }
 </script>
