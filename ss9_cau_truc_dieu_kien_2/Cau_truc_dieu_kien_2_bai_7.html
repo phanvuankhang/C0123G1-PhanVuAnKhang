@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vu An Khang</title>
+</head>
+<body>
+<script>
+    let a=+prompt("Nhập a");
+    let b=+prompt("Nhập b");
+    let c=+prompt("Nhập c");
+    let Delta=b*b-4*a*c;
+    let x=-b/(2*a);
+    if (Delta<0){
+        alert("Phương trình bậc 2 vô nghiệm");
+    }else if (Delta==0){
+        alert("Phương trinh bậc 2 có nghiệm kép x1=x2="+x);
+    }else {
+       let x1=(-b-Math.sqrt(Delta))/(2*a);
+       let x2=(-b+Math.sqrt(Delta))/(2*a);
+       alert("Phương trình bậc 2 có 2 nghiệm là:"+x1+ "và" +x2);
+    }
+</script>
+</body>
+</html>

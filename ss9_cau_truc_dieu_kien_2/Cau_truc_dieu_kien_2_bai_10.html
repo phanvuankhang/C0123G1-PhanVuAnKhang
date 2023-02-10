@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vu An Khang</title>
+</head>
+<body>
+<script>
+    let LĐNTT=+prompt("Nhập lượng điện năng tiêu thụ kWh");
+    switch (true) {
+        case 0<LĐNTT<=50:
+            alert("Giá tiền điện là"+LĐNTT*1.484+"nghìn VNĐ")
+            break;
+        case LĐNTT<=100:
+            alert("Giá tiền điện là"+LĐNTT*1.533+"nghìn VNĐ")
+            break;
+        case LĐNTT<=200:
+            alert("Giá tiền điện là"+LĐNTT*1.786+"nghìn VNĐ")
+            break;
+        case LĐNTT<=300:
+            alert("Giá tiền điện là"+LĐNTT*2.242+"nghìn VNĐ")
+            break;
+        case LĐNTT<=400:
+            alert("Giá tiền điện là"+LĐNTT*2.503+"nghìn VNĐ")
+            break;
+        case LĐNTT>400:
+            alert("Giá tiền điện là"+LĐNTT*2.587+"nghìn VNĐ")
+            break;
+    }
+</script>
+</body>
+</html>

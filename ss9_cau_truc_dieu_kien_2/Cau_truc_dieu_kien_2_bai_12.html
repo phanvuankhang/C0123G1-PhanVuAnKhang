@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vu An Khang</title>
+</head>
+<body>
+<script>
+    let sotienvay= +prompt("Nhập số tiền vay ban đầu (triệu)");
+    let sothang= +prompt("Nhập số tháng cho vay (tháng)");
+    let laithang= +prompt("Lãi suất hàng tháng");
+    let lainganhang=(sotienvay*Math.pow((1+laithang), sothang))-sotienvay
+    alert("Lãi ngân hàng là:"+lainganhang+" "+"triệu VNĐ");
+</script>
+</body>
+</html>
