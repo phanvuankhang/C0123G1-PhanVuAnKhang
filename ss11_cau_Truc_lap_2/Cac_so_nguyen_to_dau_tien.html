@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An Khang</title>
+</head>
+<body>
+    <script>
+        function checkSNT(numbers) {
+            let count = 0;
+            let countSNT = 0;
+            for (let i = 2; i < 1000; i++) {
+                if (countSNT < numbers) {
+                    for (N = 1; N <= i; N++) {
+                        if (i % N === 0) {
+                            count += 1;
+                        }
+                    }
+                        if (count === 2) {
+                            document.write(i + "<br>");
+                            countSNT += 1;
+                        }
+                        count = 0;
+                    }
+                else
+                    {
+                        break;
+                    }
+                }
+            }
+        let numbers=+prompt("Nhập n số nguyên tố đầu tiên");
+        checkSNT(numbers);
+    </script>
+</body>
+</html>

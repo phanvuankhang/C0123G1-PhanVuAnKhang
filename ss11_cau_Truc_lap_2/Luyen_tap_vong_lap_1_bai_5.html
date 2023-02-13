@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An Khang</title>
+</head>
+<body>
+<script>
+    let numb1=0, numb2=1, nextNumb;
+    let sum=0;
+    for (let i=0; i<20; i++){
+        sum=sum+numb1;
+        nextNumb=numb1+numb2;
+        numb1=numb2;
+        numb2=nextNumb;
+    }document.write("tổng của 20 số đầu tiên trong dãy fibonacci là:"+" "+sum);
+</script>
+</body>
+</html>

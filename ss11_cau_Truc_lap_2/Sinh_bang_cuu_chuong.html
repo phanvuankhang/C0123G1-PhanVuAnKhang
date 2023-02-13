@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An Khang</title>
+</head>
+<body>
+    <h1>Bảng Cửu Chương</h1>
+<script>
+    let sout;
+    sout="<table border='1' width='450'>";
+    for (let i=2; i<=9; i++){
+        sout=sout+"<tr>";
+        for (let j=2; j<=9; j++){
+            sout=sout+"<td>"+j+"*"+i+"="+j*i+"</td>";
+        }
+        sout=sout+"</tr>";
+    }
+    sout=sout+"</table>";
+    document.write(sout);
+</script>
+</body>
+</html>
