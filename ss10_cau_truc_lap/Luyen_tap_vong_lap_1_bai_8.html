@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An Khang</title>
+</head>
+<body>
+    <button onclick="doanSo()">Bắt đầu</button>
+<script>
+    function doanSo() {
+        let numb = +prompt("Số bạn muốn đoán trong khoảng là bao nhiêu ?");
+        let numbRan =Math.floor(Math.random() * numb);
+        console.log(numbRan);
+        let numbCheck;
+        let count = 0;
+        do {
+            numbCheck = +prompt("Số bạn đoán là:");
+            if (numbCheck === numbRan) {
+                alert("Chúc mừng bạn đã đoán đúng!");
+            } else if (numbCheck > numbRan) {
+                alert("Số bạn đoán bé hơn.");
+            } else {
+                alert("Số bạn đoán lớn hơn.");
+            }
+            if (count === 3) {
+                alert("Bạn hết lượt đoán");
+                break;
+            }
+            count++;
+        }
+        while (numbCheck !== numbRan);
+    }
+</script>
+</body>
+</html>
