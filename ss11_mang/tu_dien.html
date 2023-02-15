@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vu An Khang</title>
+</head>
+<body>
+    <label>Nhập từ:</label>
+    <input type="text" name="" id="string" placeholder="Hãy nhập một màu.">
+    <button onclick="trans()">Dịch</button>
+    <p id="result"></p>
+    <script>
+        function trans() {
+            let eng= ["red","blue","white","black","orange"];
+            let vie= ["màu đỏ","màu xanh dương","màu trắng","màu đen","màu cam"];
+            let string=document.getElementById("string").value;
+            let indexEng=0;
+            let result="";
+            for (let i=0; i<eng.length; i++){
+                if (string === eng[i]){
+                    indexEng=i;
+                    for (let j=0; j<vie.length; j++) {
+                        if (indexEng === j) {
+                            result = vie[j];
+                        }
+                    }
+                }
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
