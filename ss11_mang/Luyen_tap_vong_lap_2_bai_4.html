@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An Khang</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập mảng ký tự bất kỳ")
+    let count=0;
+    let check=true;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] === " ") {
+            check=true;
+            continue;
+        } else if (check) {
+            check=false;
+            count++;
+        }
+    }
+    document.write("Mảng nhập vào: " + a + "<br/>");
+    document.write("Số từ đếm được là: " + count);
+</script>
+</body>
+

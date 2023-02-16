@@ -6,14 +6,13 @@
 </head>
 <body>
 <script>
-    let arr=[1,5,9,7,15,35,14,12,25,19];
-    let v=+prompt("Nhập vào 1 phần tử số nguyên V.")
+    let arr=["6","f","4","t","u","5","9"];
+    let count=0;
     for (let i=0; i<arr.length; i++){
-        if (v === arr[i]){
-            arr[i]=[];
-            arr.push(0);
+        if(+arr[i]){
+            count++;
         }
-    }document.write(arr)
+    }document.write("Số ký tự số trong mảng là:"+count);
 </script>
 </body>
 </html>

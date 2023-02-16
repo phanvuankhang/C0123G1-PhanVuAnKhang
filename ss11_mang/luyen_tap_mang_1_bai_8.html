@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An Khang</title>
+</head>
+<body>
+<script>
+    let num=[1,5,9,7,15,35,14,12,25,19];
+    for (let i = 0; i < num.length; i++) {
+        for (let j = i+1; j < num.length; j++) {
+            if (num[i] <= num[j]) {
+                let a = num[i];
+                num[i] = num[j];
+                num[j] = a;
+            }
+        }
+    }
+    document.write(num);
+</script>
+</body>
+</html>
