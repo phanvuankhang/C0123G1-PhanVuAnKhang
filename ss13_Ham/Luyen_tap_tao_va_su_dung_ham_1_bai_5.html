@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An khang</title>
+</head>
+<body>
+<script>
+    let arr1=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arr2=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" ,"Leo"];
+    function checkStr(string) {
+        for (let i=0; i<=arr1.length; i++){
+            if (string === arr1[i]){
+                string=arr2[i];
+                return arr2[i];
+            }
+        }
+    }
+    let a=prompt("Nhập vào tên của ngôi sao.");
+    let result=checkStr(a);
+    if (checkStr(a)){
+        alert("Chòm sao của ngôi sao"+" "+a+"là"+" "+result);
+    }else {
+        alert("Không tìm thấy.");
+    }
+</script>
+</body>
+</html>
