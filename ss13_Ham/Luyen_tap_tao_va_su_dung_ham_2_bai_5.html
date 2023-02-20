@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An Khang</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập số thứ nhất.");
+    let b = +prompt("Nhập số thứ hai.");
+    let c = +prompt("Nhập số thứ ba.");
+
+    function soSanh() {
+        if (a < b && a < c) {
+            alert("Số nhỏ nhất là:" + a);
+        } else if (b < a && b < c) {
+            alert("Số nhỏ nhất là:" + b);
+        } else {
+            alert("Số nhỏ nhất là:" + c);
+        }
+        return;
+    }
+
+    soSanh();
+</script>
+</body>
+</html>

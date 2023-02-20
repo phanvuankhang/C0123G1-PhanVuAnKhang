@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An Khang</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập vào mảng bất kỳ.");
+    let arr = [];
+    arr = a;
+    let b = prompt("Nhập vào ký tự bất kỳ.");
+    let count = 0;
+
+    function check() {
+        for (let i = 0; i < arr.length; i++) {
+            if (b === arr[i]) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            alert("-1");
+        } else {
+            alert("Số lần" + " " + b + " " + "xuât hiện là:" + count);
+        }
+    }
+
+    check()
+</script>
+</body>
+</html>

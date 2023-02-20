@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vu An Khang</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập một số bất kỳ.");
+    let giaiThua = 1;
+
+    function calculate(number) {
+        for (let i = 2; i <= a; i++) {
+            giaiThua *= i;
+        }
+        alert("Giai thừa của" + " " + a + " " + "là:" + giaiThua);
+        return;
+    }
+
+    calculate();
+</script>
+</body>
+</html>
