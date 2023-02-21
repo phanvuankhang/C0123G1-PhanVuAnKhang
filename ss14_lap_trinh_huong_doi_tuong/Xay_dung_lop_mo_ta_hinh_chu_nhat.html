@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An Khang</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        getHeight() {
+            return this.height;
+
+        }
+
+        setWidth(width) {
+            this.width = width;
+        }
+
+        setHeight(height) {
+            this.height = height;
+        }
+
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+
+        getArea() {
+            return this.width * this.height;
+        }
+
+        getRectangle() {
+            return "Chiều dài=" + this.width + " " + "Chiều rộng=" + this.height + " " + "Diện tích=" + this.getArea() + " " + "Chu vi=" + this.getPerimeter();
+        }
+    }
+
+    let rectangle = new Rectangle(300, 150);
+    document.write("<br/>");
+    document.write(rectangle.getRectangle());
+    let width = rectangle.getWidth();
+    let height = rectangle.getHeight();
+    rectangle.setWidth(400);
+    rectangle.setHeight(200);
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext('2d');
+    ctx.fillStyle = "yellow";
+    ctx.fillRect(0, 0, width, height);
+</script>
+</body>
+</html>
