@@ -6,6 +6,99 @@
 </head>
 <body>
 <script>
+    class Apple{
+        constructor(weight) {
+            this.weight=weight;
+        }
+        getWeight (){
+            return this.weight;
+        }
+        setWeight (weight){
+            this.weight=weight;
+        }
+        isEmty (){
+            if (this.weight<=0){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        decrease(){
+            if (this.isEmty()){
+                return "Đã ăn hết táo.";
+            }else {
+                this.weight--;
+            }
+        }
+    }
+    class Human {
+        constructor(name,gender,weight) {
+            this.name=name;
+            this.gender=gender;
+            this.weight=weight;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(name){
+            this.name=name;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        setWeigh(weight){
+            this.weight=weight;
+        }
+        isMale(){
+            if (this.gender === 1){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        getGender(isMale){
+            if (this.isMale()){
+                return "Male";
+            }else {
+                return "Female";
+            }
+        }
+        say (string){
+            console.log(string);
+        }
+        checkApple (apple) {
+            return apple.isEmty();
+        }
+        eat (apple){
+            if (apple.getWeight()>0){
+                apple.decrease();
+                this.weight++;
+            }else
+                return "Đã ăn hết táo.";
+        }getHuman (human){
+            return "Tên:"+this.name+" "+"Giới tính:"+this.gender+" "+"Cân nặng:"+this.weight;
+        }
+    }
+    let adam=new Human("adam",1,70);
+    let eva =new Human("eva",2,60);
+    let apple= new Apple(10);
+    adam.say("Hello Eva"+"<br>");
+    eva.say("Hi Adam"+"<br>");
+    while (apple.isEmty()!==true){
+        document.write("Adam ăn táo."+"<br>");
+        adam.eat(apple);
+        document.write("Quả táo còn:"+apple.getWeight()+"dv"+"<br>");
+        document.write("Cân nặng của Adam là:"+adam.getWeight()+"<br>");
+
+        document.write("<br>");
+
+        document.write("Eva ăn táo."+"<br>");
+        eva.eat(apple);
+        document.write("Quả táo còn:"+apple.getWeight()+"dv"+"<br>");
+        document.write("Cân nặng của Eva là:"+eva.getWeight()+"<br>");
+        document.write("<br>");
+
+    }
 
 </script>
 </body>
