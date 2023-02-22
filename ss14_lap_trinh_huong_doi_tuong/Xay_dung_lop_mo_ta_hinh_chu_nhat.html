@@ -41,6 +41,13 @@
         getRectangle() {
             return "Diện tích=" + this.getArea() + " " + "Chu vi=" + this.getPerimeter();
         }
+
+        drawCanvas() {
+            let canvas = document.getElementById("myCanvas");
+            let ctx = canvas.getContext('2d');
+            ctx.fillStyle = "yellow";
+            ctx.fillRect(0, 0, width, height);
+        }
     }
 
     let rectangle = new Rectangle(300, 150);
@@ -50,10 +57,7 @@
     let height = rectangle.getHeight();
     rectangle.setWidth(400);
     rectangle.setHeight(200);
-    let canvas = document.getElementById("myCanvas");
-    let ctx = canvas.getContext('2d');
-    ctx.fillStyle = "yellow";
-    ctx.fillRect(0, 0, width, height);
+    rectangle.drawCanvas();
 </script>
 </body>
 </html>

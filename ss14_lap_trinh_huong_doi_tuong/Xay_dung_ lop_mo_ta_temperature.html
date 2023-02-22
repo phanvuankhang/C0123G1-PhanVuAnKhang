@@ -8,6 +8,9 @@
 <script>
     class Temperature {
         constructor(celsius) {
+            while (celsius<-273){
+                celsius = prompt("Nhiệt độ phải lớn hơn -273,mời nhập lại");
+            }
             this.celsius = celsius;
         }
 
@@ -24,7 +27,7 @@
         }
     }
 
-    let temperature = new Temperature(25);
+    let temperature = new Temperature(-274);
     document.write(temperature.change());
 </script>
 </body>
