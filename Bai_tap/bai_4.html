@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An Khang</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập số phần tử mảng.");
+    let arr = [];
+    for (let j = 0; j < a; j++) {
+        arr[j] = +prompt("Nhập phần tử" + j);
+    }
+    alert("Mảng đã nhập là:" + arr);
+
+    function check(arr) {
+        for (let i = 0; i < arr.length / 2; i++) {
+            if (arr[i] !== arr[arr.length - i - 1]) {
+                alert("Mảng không đối xứng.");
+            } else {
+                alert("Mảng đối xứng.");
+            }
+            break;
+        }
+
+    }
+
+    check(arr);
+</script>
+</body>
+</html>
