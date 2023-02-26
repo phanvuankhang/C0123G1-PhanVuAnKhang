@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An Khang</title>
+</head>
+<body>
+<script>
+    let n1 = +prompt("Nhập vào số phần tử trong mảng A.");
+    let a = [];
+    let b = [];
+    let c=[];
+
+    for (let i = 0; i < n1; i++) {
+        a[i] = +prompt("Nhập phần tử." + i);
+    }
+    let n2= +prompt("Nhập vào số phần tử trong mảng B.");
+    for (let j=0; j<n2; j++) {
+        b[j] = +prompt("Nhập phần tử." + j);
+    }
+    for (let k=0;k<b.length;k++){
+        if (!a.includes(b[k])) {
+            c.push(b[k]);
+        }
+    }
+    document.write("quả missingValue(A, B) ="+c);
+</script>
+</body>
+</html>
