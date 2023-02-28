@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An Khang</title>
+</head>
+<body>
+<script>
+    let select;
+    let soLuong = 0;
+    let sum = 0;
+    alert(`
+1.Cafe (18k)
+2.Cam vắt (20k)
+3.Nước ép cà rốt (15k)
+4.Nước ép cà chua (15k)
+5.Nước lọc (10k)
+6.Nước dừa (15K)
+7.Đã chọn xong.
+ `)
+    do {
+        select = +prompt("Nhập stt đồ uống bạn chọn.");
+        switch (select) {
+            case 1:
+                alert("Giá của Cafe là: 18k.");
+                soLuong = +prompt("Nhập số lượng.");
+                sum += (soLuong * 18);
+                break;
+            case 2:
+                alert("Giá của Cam vắt là: 20k.");
+                soLuong = +prompt("Nhập số lượng.");
+                sum += (soLuong * 20);
+                break;
+            case 3:
+                alert("Giá của Nước ép cà rốt là: 15k.");
+                soLuong = +prompt("Nhập số lượng.");
+                sum += (soLuong * 15);
+                break;
+            case 4:
+                alert("Giá của Nước ép cà chua là: 15k.");
+                soLuong = +prompt("Nhập số lượng.");
+                sum += (soLuong * 15);
+                break;
+            case 5:
+                alert("Giá của Nước lọc là: 10k.");
+                soLuong = +prompt("Nhập số lượng.");
+                sum += (soLuong * 10);
+                break;
+            case 6:
+                alert("Giá của Nước dừa là: 15k.");
+                soLuong = +prompt("Nhập số lượng.");
+                sum += (soLuong * 15);
+                break;
+            case 7:
+                alert("Tổng số tiền cần phải trả:" + sum + "k.");
+                alert("Cảm ơn quý khách!");
+                break;
+        }
+    } while (select !== 7);
+</script>
+</body>
+</html>
