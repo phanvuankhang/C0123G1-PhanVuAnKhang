@@ -6,35 +6,36 @@
 </head>
 <body>
 <script>
-function chuanHoa(string) {
-       let str=string.split(" ");
-       let kq="";
-    for (let i = 0; i <str.length ; i++) {
-        let temp= str[i].toLowerCase();
-        if (temp!==" "){
-            temp=temp.slice(0,1).toUpperCase()+temp.slice(1);
-            kq+=temp+" ";
-        }
-    }
-    return kq;
-}
-function demTu() {
-    let nhapTu=str.split(" ");
-    let max=nhapTu[0];
-    for (let i = 0; i <nhapTu.length ; i++) {
-        if (nhapTu[i].length>max.length){
-            max=nhapTu[i];
-        }
-    }
-return max;
-}
-let str=prompt("Nhập vào chuỗi bất kỳ.");
-document.write("Trước khi chuẩn hóa là:"+str+"<br>");
-let chuan=chuanHoa(str);
-document.write("Sau khi chuẩn hóa là:"+chuan+"<br>");
-let max=demTu(str);
-document.write("Từ dài nhất trong xâu là:"+max);
+    let str = prompt("Xâu cần chuẩn hóa là: ");
 
+    function chuanHoa(str) {
+        str = str.toLocaleLowerCase();
+        let str1 = str.split(" ");
+        let str2 = [];
+        for (let i = 0; i < str1.length; i++) {
+            if (str1[i] !== "") {
+                str2.push(str1[i].split(""));
+            }
+        }
+        for (let i = 0; i < str2.length; i++) {
+            str2[i][0] = str2[i][0].toLocaleUpperCase();
+            str2[i] = str2[i].join("");
+        }
+        return str2.join(" ");
+    }
+
+    function demKyTu(str2) {
+        str2 = str2.split(" ");
+        let doDaiLonNhat = str2[0];
+        for (let i = 0; i < str2.length; i++) {
+            if (str2[i].length > doDaiLonNhat.length) {
+                doDaiLonNhat = str2[i];
+            }
+        }
+        return doDaiLonNhat;
+    }
+    alert("Xâu trước khi chuyển hóa là: " + str);
+    alert("Xâu sau khi chuyển hóa là: " + chuanHoa(str) + ". Từ dài nhất xâu là: " + demKyTu(str));
 </script>
 </body>
 </html>
