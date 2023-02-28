@@ -9,17 +9,16 @@
     let select;
     let soLuong = 0;
     let sum = 0;
-    alert(`
-1.Cafe (18k)
-2.Cam vắt (20k)
-3.Nước ép cà rốt (15k)
-4.Nước ép cà chua (15k)
-5.Nước lọc (10k)
-6.Nước dừa (15K)
-7.Đã chọn xong.
- `)
     do {
-        select = +prompt("Nhập stt đồ uống bạn chọn.");
+        select = +prompt(" Nhập lựa chọn tương ứng để chọn thức uống: \n" +
+            "1.Cafe \n" +
+            "2.Cam vắt \n" +
+            "3.Nước ép cà rốt \n" +
+            "4.Nước ép cà chua \n" +
+            "5.Nước lọc \n" +
+            "6.Nước dừa \n" +
+            "7.Đã chọn xong."
+        )
         switch (select) {
             case 1:
                 alert("Giá của Cafe là: 18k.");

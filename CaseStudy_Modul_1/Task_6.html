@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C0123G1-Phan Vũ An Khang</title>
+</head>
+<body>
+<button onclick="">Thêm mới học viên</button>
+<button onclick="">Sửa thông tin học viên</button>
+<button onclick="">Xóa học viên</button>
+<p id="tableHvList"></p>
+</table>
+<script>
+    class HV{
+        constructor(maHV,name,classes,email,birthDay) {
+            this.maHV=maHV;
+            this.name=name;
+            this.classes=classes;
+            this.email=email;
+            this.birthDay=birthDay;
+        }
+        getMaHV(){
+            return this.maHV;
+        }
+        getName(){
+            return this.name;
+        }
+        getClasses(){
+            return this.classes;
+        }
+        getEmail(){
+            return this.email;
+        }
+        getBirthDay(){
+            return this.birthDay;
+        }
+        setMHV(newMHV){
+            this.maHV=newMaHV;
+        }
+        setName(newName){
+            this.name=newName;
+        }
+        setClasses(newClasses){
+            this.class=newClasses;
+        }
+        setEmail(newEmail){
+            this.email=newEmail;
+        }
+        setBirthDay(newBirthDay){
+            this.birthDay=newBirthDay;
+        }
+    }
+    let hv1 = new HV("HV-001","Nguyễn Văn A","C1022G1","nguyenvana@gmail.com","01/01/2004");
+    let hv2 = new HV("HV-002","Nguyễn Văn B","C1022G1","nguyenvanb@gmail.com","02/01/2004");
+    let hv3 = new HV("HV-003","Nguyễn Văn C","C1022G1","nguyenvanc@gmail.com","03/01/2004");
+    let hvList = [];
+    hvList.push(hv1);
+    hvList.push(hv2);
+    hvList.push(hv3);
+    displayList(hvList);
+    function displayList(hvList) {
+        let table= '<table border="1">';
+         table+=   '    <tr>\n' +
+            '        <th>Mã học viên</th>\n' +
+            '        <th>Họ Và Tên</th>\n' +
+            '        <th>class</th>\n' +
+            '        <th>email</th>\n' +
+            '        <th>ngaysinh</th>\n' +
+            '    </tr>';
+        for (let i = 0; i <hvList.length ; i++) {
+            table+= '<tr>\n' +
+            '        <th>'+hvList[i].maHV+'</th>\n' +
+            '        <th>'+hvList[i].name+'</th>\n' +
+            '        <th>'+hvList[i].classes+'</th>\n' +
+            '        <th>'+hvList[i].email+'</th>\n' +
+            '        <th>'+hvList[i].birthDay+'</th>\n' +
+            '    </tr>';
+        }
+        table+='</table>';
+        document.getElementById("tableHvList").innerHTML=table;
+    }
+    function addHV() {
+        let maHV=+prompt("")
+
+    }
+</script>
+</body>
+</html>
