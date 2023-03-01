@@ -91,7 +91,19 @@
     }
 
     function addStudent() {
-        let maHV = prompt("Nhập mã học viên");
+        let maHV;
+        let check;
+        do {
+            check = false;
+            maHV = prompt("Nhập mã học viên");
+            for (let i = 0; i < studentList.length; i++) {
+                if (maHV === studentList[i].maHV) {
+                    check = true;
+                    alert("Mã học viên đã tồn tại.");
+                }
+            }
+        } while (check !== false)
+        maHV = maHV;
         let name = prompt("Nhâp tên học viên");
         let classes = prompt("Nhập lớp học viên");
         let email = prompt("Nhập email");
